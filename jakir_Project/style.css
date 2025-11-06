@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  user-select: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background-color: #535250;
+  overflow: hidden;
+}
+.container::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(Pics/Les\ troubles\ bipolaires\ _\ savoir\ pour\ guérir_LE_upscale_balanced_x4.png);
+  inset: 0;
+  background-size: cover;
+  background-position: top;
+  z-index: -1;
+  filter: blur(1.5px);
+}
+header {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 170px;
+  /* box-shadow: 0px 5px 100px #bb2d027a; */
+}
+.titleOne {
+  font-family: "Lato", sans-serif;
+  font-size: 65px;
+  text-transform: uppercase;
+  /* letter-spacing: px; */
+  font-weight: 800;
+  color: #d3cfc5;
+  position: absolute;
+  top: 30px;
+  text-shadow: 0px -2px 4px #46434269;
+  width: 450px;
+}
+.titleTwo {
+  color: white;
+  font-family: "Imperial Script", cursive;
+  font-size: 90px;
+  font-weight: 300;
+  position: absolute;
+  top: 35px;
+  right: 50%;
+  transform: translate(50%);
+  text-shadow: 0px 0px 10px rgb(44, 43, 43);
+}
+.title {
+  position: relative;
+  width: 400px;
+  height: 200px;
+}
+.elem-head {
+  margin-top: -60px;
+  color: white;
+  font-family: "Quintessential", serif;
+  font-size: 30px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: all 0.3s;
+}
+
+.elem-head::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 5px;
+  background-color: white; /* line color */
+  transition: all 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.elem-head:hover {
+  color: #d3cfc5;
+  transform: scale(1.2);
+  padding: 5px 10px;
+}
+.elem-head:hover::before {
+  background-color: #d3cfc5;
+  width: 100%;
+}
+.quote {
+  opacity: 0; /* start invisible */
+  transform: translateX(-50px); /* start slightly left */
+  animation: slideIn 1.5s ease forwards; /* animation */
+  animation-delay: 2s; /* delay before animation starts */
+  color: #e9e7e3;
+  position: absolute;
+  bottom: 25%;
+  font-size: 100px;
+  font-weight: 500;
+  right: 25%;
+  width: 80%;
+  font-family: "Italianno", cursive;
+  text-shadow: 0px 0px 20px#383737;
+}
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translate(20%);
+  }
+}
+.body-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1b1b1a;
+  border-top: white 1px ridge;
+}
+#intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #010101;
+}
+#intro h4 {
+  font-family: "Imperial Script", cursive;
+  font-size: 80px;
+  text-align: center;
+  color: #d6cebd;
+  position: relative;
+  padding-bottom: 5px;
+  text-shadow: 0px 0px 10px #d6cebd;
+  margin-bottom: 30px;
+}
+#intro video {
+  border-radius: 20px;
+  z-index: 1;
+  display: block;
+}
+#intro .video-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#intro .video-container::before,
+#intro .video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none; /* so it doesn’t block clicks */
+}
+#intro .video-container::before {
+  left: 20%;
+  background: linear-gradient(to right, rgb(5, 5, 5), transparent);
+}
+
+#intro .video-container::after {
+  right: 20%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), transparent);
+}
+#definition {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+}
+#definition > .left {
+  width: 50%;
+  height: 100%;
+  background-color: #010101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+#definition > .right {
+  width: 50%;
+  height: 100%;
+  background-color: #010101;
+  position: relative;
+}
+#definition > .left > h4 {
+  font-family: "Imperial Script", cursive;
+  font-size: 50px;
+  text-align: center;
+  color: #d6cebd;
+  position: relative;
+  padding-bottom: 5px;
+  text-shadow: 0px 0px 10px #d6cebd;
+}
+#definition > .left > h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #d6cebd;
+  box-shadow: 0px 0px 10px #d6cebd;
+  border-radius: 5px;
+}
+#definition > .left > p {
+  width: 80%;
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: "DM Serif Text", serif;
+  color: #bbbbbb;
+}
+#definition > .left li {
+  font-family: "DM Serif Text", serif;
+  margin-left: 50px;
+  width: 80%;
+  font-size: 20px;
+  color: #bbbbbb;
+  margin-bottom: 9px;
+}
+#definition > .left > ul span {
+  font-size: 23px;
+  text-shadow: 0px 0px 3px #d6b376;
+}
+#definition > .right .wraper {
+  height: 100%;
+  position: relative;
+  right: 0;
+}
+#definition > .right img {
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+#definition > .right .wraper::after {
+  font-size: 23px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 30%; /* adjust how tall the gradient is */
+  background: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
+}
+#causes {
+  width: 100%;
+  height: 130vh;
+  background-color: #010101;
+  z-index: 1;
+  position: relative;
+}
+.causes-body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.causes-body > h4 {
+  font-family: "Imperial Script", cursive;
+  font-size: 90px;
+  color: #d6cebd;
+  padding-bottom: 5px;
+  text-shadow: 0px 0px 10px #d6cebd;
+  text-align: center;
+}
+.causes-body p {
+  width: 80%;
+  margin-left: 15px;
+  font-size: 25px;
+  font-family: "DM Serif Text", serif;
+  color: #bbbbbb;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+.causes-body > ul > li {
+  font-family: "DM Serif Text", serif;
+  margin-left: 50px;
+  width: 80%;
+  font-size: 25px;
+  color: #bbbbbb;
+  margin-bottom: 20px;
+  margin-left: 10%;
+}
+.causes-body > ul > li span {
+  font-size: 28px;
+  text-shadow: 0px 0px 3px #d6b376;
+}
+#causes .video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#causes .video-container video {
+  border-radius: 10px;
+}
+#traitement {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+#traitement .left {
+  height: 100%;
+  width: 50%;
+  background-color: #010101;
+}
+
+#traitement .right {
+  height: 100%;
+  width: 50%;
+  background-color: #010101;
+  border-left: solid 2px #d3cfc5;
+}
+
+#traitement > .left p {
+  width: 80%;
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: "DM Serif Text", serif;
+  color: #bbbbbb;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+#traitement > .left .box {
+  display: flex;
+}
+#traitement > .left > .box span {
+  font-size: 23px;
+  text-shadow: 0px 0px 3px #d6b376;
+}
+#traitement > .left > .box p {
+  font-size: 20px;
+  text-align: justify;
+}
+#traitement .titre {
+  font-family: "Imperial Script", cursive;
+  font-size: 90px;
+  font-weight: 400;
+  color: #d6cebd;
+  padding-bottom: 5px;
+  text-shadow: 0px 0px 10px #d6cebd;
+  text-align: center;
+}
+#traitement .right p {
+  width: 80%;
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: "DM Serif Text", serif;
+  color: #bbbbbb;
+  margin-left: 10%;
+  margin-bottom: 50px;
+}
+#traitement .right .box {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+#traitement .right .box > li {
+  list-style-type: none;
+  font-family: "DM Serif Text", serif;
+  margin-left: 50px;
+  width: 80%;
+  font-size: 17px;
+  color: #bbbbbb;
+}
+#traitement .right .box > li > span {
+  font-size: 20px;
+  text-shadow: 0px 0px 5px #d6b376;
+}
+footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #010101;
+  width: 100%;
+  height: 20vh;
+  border-top: #535250 1px solid;
+  flex-direction: column;
+  gap: 10px;
+}
+footer > div > h3 {
+  color: #d3cfc5;
+  text-shadow: #d3cfc5 0px 0px 10px;
+}
